@@ -1,0 +1,58 @@
+.cardContainer {
+  background: var(--card-bg);
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  cursor: grab;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid transparent;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+  touch-action: none;
+}
+
+.cardContainer:active {
+  cursor: grabbing;
+}
+
+.cardContainer:hover {
+  background: var(--card-bg-hover);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.cardDragging {
+  background: rgba(30, 41, 59, 0.9);
+  backdrop-filter: blur(8px);
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--accent-color);
+  z-index: 1000;
+  cursor: grabbing;
+}
+
+.cardTitle {
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.cardLabels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.cardLabelBadge {
+  height: 18px;
+  padding: 0 8px;
+  border-radius: 9px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: white;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}

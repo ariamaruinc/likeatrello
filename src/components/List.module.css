@@ -1,0 +1,121 @@
+.listContainer {
+  width: var(--list-width);
+  padding: 12px;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 100%;
+  transition: background-color var(--transition-smooth);
+}
+
+.listContainer:hover {
+  background: rgba(40, 50, 70, 0.45);
+}
+
+.listHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 8px;
+}
+
+.listTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.moreBtn {
+  color: var(--text-secondary);
+  padding: 4px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.moreBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+.cardList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  min-height: 10px; /* To allow dropping when empty */
+  padding-bottom: 4px;
+}
+
+/* Custom scrollbar for cardList */
+.cardList::-webkit-scrollbar {
+  width: 6px;
+}
+
+.addCardBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-align: left;
+  padding: 8px 12px;
+  color: var(--text-secondary);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+}
+
+.addCardBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+/* Add Card Form */
+.addCardForm {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.addCardInput {
+  background: var(--card-bg);
+  border: 1px solid var(--accent-color);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  color: var(--text-primary);
+  resize: none;
+  min-height: 60px;
+  font-size: 0.9rem;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+  outline: none;
+}
+
+.addCardActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btnAddConfirm {
+  background: var(--accent-color);
+  color: white;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+.btnAddConfirm:hover {
+  background: var(--accent-hover);
+}
+
+.btnAddCancel {
+  color: var(--text-secondary);
+  padding: 4px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btnAddCancel:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.1);
+}
