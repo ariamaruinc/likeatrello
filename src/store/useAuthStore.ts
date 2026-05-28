@@ -12,7 +12,7 @@ interface AuthState {
 
 export const useAuthStore = create<AuthState>((set) => {
   // 初期化時に Firebase の認証状態を監視
-  const unsubscribe = onAuthStateChanged(auth, (user) => {
+  void onAuthStateChanged(auth, (user) => {
     set({
       user,
       isAuthenticated: !!user,
